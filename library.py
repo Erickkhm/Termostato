@@ -8,7 +8,7 @@ import dlog #
 # Funciones
 def config():   #configuración I2C
     i2c = I2C(0, scl=Pin(1, Pin.OPEN_DRAIN, Pin.PULL_UP),
-              sda=Pin(2, Pin.OPEN_DRAIN, Pin.PULL_UP), freq=100000)
+              sda=Pin(0, Pin.OPEN_DRAIN, Pin.PULL_UP), freq=100000)
     print('i2c:', i2c.scan() )
     rtc = RTC()
     return i2c, rtc
