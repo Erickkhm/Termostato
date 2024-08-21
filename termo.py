@@ -25,7 +25,7 @@ print('ID:' , ID)
 utc = -6
 i2c, rtc = config()
 bme = bme280.BME280(i2c=i2c)
-tm = tm1637.TM1637(clk=Pin(3), dio=Pin(4))
+tm = tm1637.TM1637(clk=Pin(2), dio=Pin(3))
 time_now = time() # tiempo actual (hora y fecha)
 time_mide = time_now  # tiempo de siguiente medición
 time_RTC = time_now #tiempo de siguiente update RTC
